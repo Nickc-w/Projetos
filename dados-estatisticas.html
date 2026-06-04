@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados e estatísticas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-shell">
+        <header class="top-app-bar" data-name="Header - TopAppBar">
+            <button class="icon-button" id="menuToggle" aria-label="Abrir menu">
+                <img src="assets/menu_hamburguer.png" alt="Menu">
+            </button>
+            <div class="top-app-bar__title" data-name="Heading 1">Dados e estatísticas</div>
+            <button class="icon-button top-app-bar__profile" aria-label="Perfil" data-name="Button">
+                <img src="assets/acessibilidade.png" alt="Perfil">
+            </button>
+        </header>
+
+        <div class="menu-overlay" id="sideMenu" aria-hidden="true">
+            <aside class="side-menu" role="dialog" aria-label="Menu do Portal">
+                <div class="menu-header">
+                    <div class="menu-title">Menu do Portal</div>
+                    <button type="button" class="menu-close" id="menuClose" aria-label="Fechar menu">×</button>
+                </div>
+                <ul class="menu-list">
+                    <li><a href="home-page.html" class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5L12 3l9 8.5"/><path d="M9 21V13h6v8"/></svg>Início</a></li>
+                    <li><a href="#" class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="12"/><circle cx="12" cy="16" r="1"/></svg>Sobre nós</a></li>
+                    <li><a href="dados-estatisticas.html" class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17v-6"/><path d="M8 17v-10"/><path d="M13 17v-4"/><path d="M18 17V9"/><path d="M21 17h-18"/></svg>Dados e estatísticas</a></li>
+                    <li><a href="#" class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 13l2 2 4-4"/><path d="M21 15V9a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2Z"/></svg>Acordos institucionais</a></li>
+                    <li><a href="#" class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M8 11l4 4 4-4"/><path d="M4 21h16"/></svg>Extração de dados</a></li>
+                    <li><a href="#" class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M4 8h16"/><path d="M9 12h6"/></svg>Contato/Ajuda</a></li>
+                </ul>
+                <div class="menu-divider"></div>
+                <ul class="menu-list menu-list--secondary">
+                    <li><a href="#" class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a7.9 7.9 0 0 0 .6-3 7.9 7.9 0 0 0-.6-3"/><path d="M4.6 9A7.9 7.9 0 0 0 4 12a7.9 7.9 0 0 0 .6 3"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M4.93 4.93l1.41 1.41"/><path d="M17.66 17.66l1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="M4.93 19.07l1.41-1.41"/><path d="M17.66 6.34l1.41-1.41"/></svg>Configurações</a></li>
+                    <li><a href="#" class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16a4 4 0 0 0 4-4V7a4 4 0 0 0-8 0v5a4 4 0 0 0 4 4Z"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>Acessibilidade</a></li>
+                </ul>
+                <a href="#" class="menu-logout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>Sair</a>
+            </aside>
+        </div>
+
+        <div class="dados-estatisticas-page" data-name="Dados e estatistica - iPhone 17">
+
+        <main class="page-content" data-name="Main">
+            <section class="hero-section" data-name="Hero Section">
+                <div class="hero-heading" data-name="Heading 2">
+                    <h1>Dados e estatísticas de<br>currículos da plataforma lattes</h1>
+                </div>
+                <div class="hero-copy" data-name="Container">
+                    <p>Explore indicadores acadêmicos, institucionais e demográficos da Plataforma Lattes por meio de gráficos e análises da base curricular brasileira.</p>
+                </div>
+            </section>
+
+            <section class="panel-card" data-name="Category Bento Grid">
+                <div class="panel-card__frame" data-name="Background+Border+Shadow">
+                    <div class="panel-card__icon-frame" data-name="Margin">
+                        <div class="panel-card__icon-background" data-name="Background">
+                            <img src="https://www.figma.com/api/mcp/asset/d71a6e8a-f37e-4e6e-af55-b8a816daae14" alt="Ícone painel">
+                        </div>
+                    </div>
+                    <div class="panel-card__title" data-name="Heading 3:margin">
+                        <h2>Painel Lattes</h2>
+                    </div>
+                    <div class="panel-card__description" data-name="Margin">
+                        <p>Acesse visualizações por região, instituição, perfil acadêmico e outros filtros da plataforma.</p>
+                    </div>
+                    <a href="painel_grandeArea.html" class="button button--primary" data-name="Button">
+                        <span>Acessar painel</span>
+                        <img src="https://www.figma.com/api/mcp/asset/c9a8e977-dc7c-4f8a-aab9-f819f635818b" alt="Seta direita">
+                    </a>
+                </div>
+            </section>
+
+            <section class="platforms-section" data-name="Section">
+                <div class="platforms-title" data-name="Heading 4">PLATAFORMAS INTEGRADAS</div>
+                <div class="platforms-container" data-name="Container">
+                    <div class="platform-row">
+                        <div class="platform-item" data-name="Container">
+                            <img src="./assets/livro.png" alt="Scopus">
+                            <span>Scopus</span>
+                        </div>
+                        <div class="platform-item" data-name="Container">
+                            <img src="./assets/id.png" alt="ORCID">
+                            <span>ORCID</span>
+                        </div>
+                    </div>
+                    <div class="platform-row platform-row--center">
+                        <div class="platform-item" data-name="Container">
+                            <img src="./assets/chapeu.png" alt="Web of Science">
+                            <span>Web of Science</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <h2>Plataforma Lattes</h2>
+                <p>© 2024 Portal Científico Lattes. Plataforma integrada de currículos, grupos de pesquisa e instituições acadêmicas em um único sistema de informações.</p>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-links__heading">
+                    <span>EXPLORE A PLATAFORMA</span>
+                </div>
+                <ul class="footer-links__list">
+                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="#">Dados e estatísticas</a></li>
+                    <li><a href="#">Acordos institucionais</a></li>
+                    <li><a href="#">Extração de dados</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <h3>CENTRAL DE ATENDIMENTO</h3>
+            <p>Dúvidas sobre o uso da plataforma ou acesso aos datasets brutos? Entre em contato com nossa equipe técnica.</p>
+            <a href="#" class="contact-link">Acesse o FAQ</a>
+            <a href="tel:+556190000000" class="contact-link">(61) 90000-0000</a>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Brasil, 2024. Todos os direitos reservados.</p>
+            <div class="footer-legal">
+                <a href="#">Termos de uso</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+        </footer>
+    </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>

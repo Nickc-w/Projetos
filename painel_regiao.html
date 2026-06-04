@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Lattes - Dados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-painel-page="regiao">
+    <div class="app-shell">
+        <header class="top-app-bar">
+            <button class="icon-button" id="menuToggle" aria-label="Abrir menu">
+                <img src="assets/menu_hamburguer.png" alt="Menu" />
+            </button>
+            <div class="top-app-bar__title">Painel Lattes - Dados</div>
+            <button class="icon-button" aria-label="Notificações">
+                <img src="assets/acessibilidade.png" alt="Notificações" />
+            </button>
+        </header>
+
+        <div class="menu-overlay" id="sideMenu" aria-hidden="true">
+            <aside class="side-menu side-menu--painel" role="dialog" aria-label="Menu do painel">
+                <div class="menu-header">
+                    <div class="menu-title">Menu do painel</div>
+                    <button type="button" class="menu-close" id="menuClose" aria-label="Fechar menu">×</button>
+                </div>
+                <ul class="menu-list">
+                    <li>
+                        <a href="dados-estatisticas.html" class="menu-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/>
+                            </svg>
+                            Voltar
+                        </a>
+                    </li>
+                </ul>
+                <div class="menu-divider"></div>
+                <ul class="menu-list menu-list--secondary">
+                    <li>
+                        <a href="#" class="menu-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="3"/><path d="M19.4 15a7.9 7.9 0 0 0 .6-3 7.9 7.9 0 0 0-.6-3"/><path d="M4.6 9A7.9 7.9 0 0 0 4 12a7.9 7.9 0 0 0 .6 3"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M4.93 4.93l1.41 1.41"/><path d="M17.66 17.66l1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="M4.93 19.07l1.41-1.41"/><path d="M17.66 6.34l1.41-1.41"/>
+                            </svg>
+                            Configurações
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="4" r="2"/><path d="M12 6v2"/><path d="M6 10h12"/><path d="M7 22h10l-1-10H8l-1 10Z"/>
+                            </svg>
+                            Acessibilidade
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+
+        <main class="main-content painel-content">
+            <section class="painel-page painel-page--regiao">
+                <div class="painel-header">
+                    <h1 class="painel-title">Distribuição Geográfica de Pesquisadores</h1>
+                    <p class="painel-subtitle">Mapeamento da densidade de pesquisadores e formação acadêmica por região.</p>
+                </div>
+
+                <div class="painel-controls">
+                    <button class="button button--filter" id="filtroToggle">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 6h16M6 12h12M8 18h8"/>
+                        </svg>
+                        Filtro
+                    </button>
+                    <div class="controls-divider"></div>
+                    <button class="icon-button icon-button--action" aria-label="Download">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                    </button>
+                    <button class="icon-button icon-button--action" aria-label="Compartilhar">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <span class="metric-label">Concentração (Sudeste)</span>
+                        <div class="metric-value">
+                            <span class="metric-number">62%</span>
+                        </div>
+                        <span class="metric-footnote">Concentração de Pesquisa</span>
+                    </div>
+                    <div class="metric-card metric-card--growth">
+                        <span class="metric-label">Crescimento Regional</span>
+                        <div class="metric-value">
+                            <span class="metric-number metric-positive">+8%</span>
+                            <svg class="metric-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
+                            </svg>
+                        </div>
+                        <span class="metric-footnote">Região Norte</span>
+                    </div>
+                </div>
+
+                <div class="chart-card chart-card--curriculos">
+                    <div class="chart-header">
+                        <h2 class="chart-title">Currículos por Região</h2>
+                        <svg class="chart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M3 17v-6"/><path d="M8 17v-10"/><path d="M13 17v-4"/><path d="M18 17V9"/><path d="M21 17h-18"/>
+                        </svg>
+                    </div>
+                    <div class="bars-list bars-list--regiao">
+                        <div class="bar-item">
+                            <div class="bar-info">
+                                <span class="bar-label">Sudeste</span>
+                                <span class="bar-value">142.3k</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar-info">
+                                <span class="bar-label">Sul</span>
+                                <span class="bar-value">45.8k</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill bar-fill--sul" style="width: 32%;"></div>
+                            </div>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar-info">
+                                <span class="bar-label">Nordeste</span>
+                                <span class="bar-value">28.1k</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill bar-fill--nordeste" style="width: 20%;"></div>
+                            </div>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar-info">
+                                <span class="bar-label">Centro-Oeste</span>
+                                <span class="bar-value">12.4k</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill bar-fill--centro" style="width: 9%;"></div>
+                            </div>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar-info">
+                                <span class="bar-label">Norte</span>
+                                <span class="bar-value">6.2k</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill bar-fill--norte" style="width: 4%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-card chart-card--estados">
+                    <div class="chart-card__header chart-card__header--estados">
+                        <h2 class="chart-title">Pesquisadores por Estado</h2>
+                        <a href="#" class="chart-header__link">Ver tudo</a>
+                    </div>
+                    <ol class="state-ranking">
+                        <li class="state-ranking__item">
+                            <span class="state-ranking__rank state-ranking__rank--top">1</span>
+                            <div class="state-ranking__info">
+                                <span class="state-ranking__name">São Paulo</span>
+                                <span class="state-ranking__region">Sudeste</span>
+                            </div>
+                            <div class="state-ranking__stats">
+                                <span class="state-ranking__count">82.1k</span>
+                                <span class="state-ranking__trend state-ranking__trend--up">+1.2%</span>
+                            </div>
+                        </li>
+                        <li class="state-ranking__item">
+                            <span class="state-ranking__rank state-ranking__rank--top">2</span>
+                            <div class="state-ranking__info">
+                                <span class="state-ranking__name">Minas Gerais</span>
+                                <span class="state-ranking__region">Sudeste</span>
+                            </div>
+                            <div class="state-ranking__stats">
+                                <span class="state-ranking__count">34.5k</span>
+                                <span class="state-ranking__trend state-ranking__trend--up">+0.8%</span>
+                            </div>
+                        </li>
+                        <li class="state-ranking__item">
+                            <span class="state-ranking__rank state-ranking__rank--muted">3</span>
+                            <div class="state-ranking__info">
+                                <span class="state-ranking__name">Rio de Janeiro</span>
+                                <span class="state-ranking__region">Sudeste</span>
+                            </div>
+                            <div class="state-ranking__stats">
+                                <span class="state-ranking__count">25.7k</span>
+                                <span class="state-ranking__trend state-ranking__trend--down">-0.2%</span>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="showcase-card showcase-card--panorama">
+                    <img src="assets/mapa.png" alt="Mapa do Brasil com panorama regional de formação">
+                    <div class="showcase-overlay">
+                        <h3>Panorama Regional de Formação</h3>
+                        <p>Dados consolidados de 2024</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="painel-simple-footer">
+            <h2 class="painel-simple-footer__title">Painel Lattes - Dados</h2>
+            <p class="painel-simple-footer__copy">© 2024 Observatório de Equidade Científica.<br>Dados abertos e acessíveis.</p>
+        </footer>
+
+        <div class="filter-overlay" id="filterPanel" aria-hidden="true">
+            <div class="filter-panel">
+                <div class="filter-header">
+                    <button class="filter-close" id="filtroClose" aria-label="Fechar filtros">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+                        </svg>
+                    </button>
+                    <h2>Filtros</h2>
+                    <div class="filter-settings">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="filter-content">
+                    <div class="filter-section">
+                        <div class="filter-section-header">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9h12M6 15h12"/>
+                            </svg>
+                            <span>LATTES</span>
+                        </div>
+                        <div class="filter-options">
+                            <label class="filter-option filter-option--selected">
+                                <input type="radio" name="lattes" value="formacao" checked>
+                                <span>Formação</span>
+                                <div class="radio-custom radio-custom--checked"></div>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="lattes" value="atuacao">
+                                <span>Atuação</span>
+                                <div class="radio-custom"></div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <div class="filter-section-header">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/>
+                            </svg>
+                            <span>TIPO DE GRÁFICO</span>
+                        </div>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="grafico" value="barras">
+                                <span>Barras</span>
+                                <div class="checkbox-custom"></div>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="grafico" value="pizza">
+                                <span>Pizza</span>
+                                <div class="checkbox-custom"></div>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="grafico" value="linha">
+                                <span>Linha</span>
+                                <div class="checkbox-custom"></div>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="grafico" value="ranking">
+                                <span>Ranking</span>
+                                <div class="checkbox-custom"></div>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="grafico" value="cards">
+                                <span>Cards estatísticos</span>
+                                <div class="checkbox-custom"></div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <div class="filter-section-header">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 9l5-5 5 5M12 4v16"/>
+                            </svg>
+                            <span>DIMENSÃO</span>
+                        </div>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="dimensao" value="grande-area">
+                                <span>Grande Área</span>
+                                <div class="checkbox-custom"></div>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="dimensao" value="area">
+                                <span>Área</span>
+                                <div class="checkbox-custom"></div>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="dimensao" value="instituicao">
+                                <span>Instituição</span>
+                                <div class="checkbox-custom"></div>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="dimensao" value="pais">
+                                <span>País</span>
+                                <div class="checkbox-custom"></div>
+                            </label>
+                            <label class="filter-option filter-option--selected">
+                                <input type="checkbox" name="dimensao" value="regiao" checked>
+                                <span>Região</span>
+                                <div class="checkbox-custom checkbox-custom--checked"></div>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="dimensao" value="estado">
+                                <span>Estado</span>
+                                <div class="checkbox-custom"></div>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="dimensao" value="cidade">
+                                <span>Cidade</span>
+                                <div class="checkbox-custom"></div>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="dimensao" value="enquadramento">
+                                <span>Enquadramento (Atuação)</span>
+                                <div class="checkbox-custom"></div>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="dimensao" value="setor">
+                                <span>Setor Institucional (Atuação)</span>
+                                <div class="checkbox-custom"></div>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="dimensao" value="sexo-idade">
+                                <span>Sexo/Idade</span>
+                                <div class="checkbox-custom"></div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-footer">
+                    <button class="button button--primary button--apply">Aplicar filtros</button>
+                    <button class="button button--secondary button--clear">Limpar filtros</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script defer src="script.js"></script>
+</body>
+</html>
