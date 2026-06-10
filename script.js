@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initPainelFilters();
 });
 
-const PORTAL_MENU_ACTIVE = new Set(['home-page.html', 'dados-estatisticas.html']);
+const PORTAL_MENU_ACTIVE = new Set(['index.html', 'dados-estatisticas.html']);
 
 function isPortalMenuLinkActive(href) {
     if (!href || href === '#') {

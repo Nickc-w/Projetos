@@ -254,7 +254,7 @@ a {
     text-transform: uppercase;
 }
 
-/* Rodapé portal (home-page + dados-estatísticas): seção inferior */
+/* Rodapé portal (index + dados-estatísticas): seção inferior */
 .app-shell .site-footer .footer-bottom p,
 .dados-estatisticas-page .site-footer .footer-bottom p,
 .app-shell .site-footer .footer-legal a,
