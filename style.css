@@ -180,7 +180,12 @@ a {
     line-height: 16px;
 }
 
-.resource-card a img { width: 12px; height: 12px; }
+.resource-card a img,
+.resource-card a svg {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+}
 .card-icon img { width: 20px; height: auto; }
 
 
