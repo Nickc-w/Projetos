@@ -22,12 +22,40 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     setupToggle('menuToggle', 'menuClose', 'sideMenu');
-    setupToggle('filtroToggle', 'filtroClose', 'filterPanel');
+    setupFilterPanel();
 
     initPortalMenu();
     initPainelMenu();
     initPainelFilters();
 });
+
+function setFilterPanelOpen(open) {
+    const target = document.getElementById('filterPanel');
+    if (!target) {
+        return;
+    }
+
+    target.classList.toggle('open', open);
+    target.setAttribute('aria-hidden', open ? 'false' : 'true');
+    document.body.classList.toggle('filter-overlay-open', open);
+}
+
+function setupFilterPanel() {
+    const trigger = document.getElementById('filtroToggle');
+    const close = document.getElementById('filtroClose');
+    const target = document.getElementById('filterPanel');
+
+    document.body.classList.remove('filter-overlay-open');
+
+    trigger?.addEventListener('click', () => setFilterPanelOpen(true));
+    close?.addEventListener('click', () => setFilterPanelOpen(false));
+
+    target?.addEventListener('click', (event) => {
+        if (event.target === target) {
+            setFilterPanelOpen(false);
+        }
+    });
+}
 
 const PORTAL_MENU_ACTIVE = new Set(['index.html', 'dados-estatisticas.html']);
 
@@ -190,10 +218,8 @@ function resolveTargetPage(dimensao) {
     return PAINEL_ROUTES[DEFAULT_DIMENSAO];
 }
 
-function closeFilterPanel(filterPanel) {
-    if (!filterPanel) return;
-    filterPanel.classList.remove('open');
-    filterPanel.setAttribute('aria-hidden', 'true');
+function closeFilterPanel() {
+    setFilterPanelOpen(false);
 }
 
 function initPainelFilters() {
@@ -274,7 +300,7 @@ function initPainelFilters() {
             const targetPage = resolveTargetPage(dimensao);
             const currentPage = window.location.pathname.split('/').pop() || '';
 
-            closeFilterPanel(filterPanel);
+            closeFilterPanel();
 
             if (currentPage !== targetPage) {
                 window.location.href = targetPage;
