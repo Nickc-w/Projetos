@@ -569,7 +569,7 @@ a {
 
 .dados-estatisticas-page .hero-heading h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 21px;
     line-height: 32px;
     font-weight: 600;
     color: #191c1e;
@@ -577,7 +577,7 @@ a {
 
 .dados-estatisticas-page .hero-copy {
     color: #45464d;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 1.4;
     margin: 0;
 }
@@ -624,7 +624,7 @@ a {
 
 .dados-estatisticas-page .panel-card__title h2 {
     margin: 0;
-    font-size: 32px;
+    font-size: 24px;
     line-height: 40px;
     font-weight: 600;
     color: #191c1e;
@@ -633,7 +633,7 @@ a {
 
 .dados-estatisticas-page .panel-card__description p {
     margin: 0;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 28px;
     color: #45464d;
     text-align: center;
@@ -679,9 +679,34 @@ a {
     text-transform: uppercase;
 }
 
+.dados-estatisticas-page .platforms-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin: 0 -14px;
+}
+
+.dados-estatisticas-page .platforms-carousel__arrow {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    color: #0051d5;
+    pointer-events: none;
+}
+
+.dados-estatisticas-page .platforms-carousel__arrow svg {
+    width: 20px;
+    height: 20px;
+}
+
 .dados-estatisticas-page .platforms-container {
     display: grid;
     gap: 16px;
+    flex: 1;
+    min-width: 0;
 }
 
 .dados-estatisticas-page .platform-row {
